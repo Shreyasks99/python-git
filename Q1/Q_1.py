@@ -1,10 +1,10 @@
 # Write a program to accept a number and determine whether it is a prime number or not #
 import math
 def is_prime_fun(num):
-    if num<2:
+    if num < 2:
         return False
     else:
-        for i in range(2,math.sqrt(num) +1):
+        for i in range(2,num//2 +1):
             if num % i == 0:
                 return False
     return True
