@@ -1,4 +1,4 @@
-# Write a program to accept a number from the user#
+# Write a program to accept a number from the user:; then display the reverse of the entered number.#
 num=int(input("Enter a number:"))
 temp=num
 rev=0

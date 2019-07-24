@@ -2,8 +2,6 @@
 import random as random
 names= input("Enter your name:")
 lst=['a','e','i','o','u']
-for name in names:
-        if name in 'aeiou':
-                print(name)
-print(len(list(filter(lambda x:x in lst,names))))
+list_1 = list(filter(lambda x:x in lst,names))
+print(list_1)
 
