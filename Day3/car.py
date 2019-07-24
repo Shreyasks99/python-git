@@ -15,5 +15,5 @@ lst = [bmw,omni,nano,city,jazz]
 
 for car in lst:
     car.showinfo()
-    c = len(list(filter(lambda x: x.is_started and x.count == 0)))
-    print(c)
+    c = len(list(filter(lambda x: x.is_started and x.count == 0,lst)))
+print(f"No.of Cars which is started but no gears are added:{c}")

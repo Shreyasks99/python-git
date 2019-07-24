@@ -1,6 +1,6 @@
 class Car:
 
-    def _init_(self, regno, no_of_gears):
+    def __init__(self, regno, no_of_gears):
         self.regno = regno
         self.no_of_gears = no_of_gears
         self.is_started = False
@@ -28,6 +28,7 @@ class Car:
                 print(f"Reached maximum gears....{self.count}")
         else:
             print("Car is stopped and cannot chamge the gears")
+
     def showinfo(self):
         print(f"{self.regno}-Started:{self.is_started} Gears:{self.no_of_gears} Added:{self.count}")
 

@@ -1,0 +1,10 @@
+1,Shreyas,M.tech,96500,ISE
+2,Ravitej,B.tech,56450,ISE
+3,Nischith,B.tech,87410,ECE
+4,Abdul Faiz,M.tech,95000,ECE
+5,Roshan,M.tech,65000,ISE
+6,Adarsha,MBA,74120,ISE
+7,Sachin,M.tech,89520,CSE
+8,Joel,B.tech,74210,ISE
+9,Akshay,MBA,96500,CSE
+10,Deemanth,MBA,87520,CSE
