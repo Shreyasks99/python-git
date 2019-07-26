@@ -1,0 +1,4 @@
+Who is the prime minister of India?,RahulGandhi,SoniaGandhi,NarendraModi,Siddaramaih,C
+Who is the first Indian to win All England Badminton Championship?,SainaNehwal,PrakashPadukone,ParupalliKashyap,P.V.Sindhu,B 
+Who is the first person to hit 100 Hundreds in Internation Cricket?,BrainLara,ViratKohli,SachinTendulkar,RohitSharma,Championship
+Who is the first person to land on the moon?,NeilArmStrong,JackieChan,KiranBedi,ChrisGayle

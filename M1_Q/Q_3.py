@@ -1,4 +1,4 @@
-#Write a program to accept 2 different numbers from the user and print all the prime numbers between these 2 numbers.#
+#3.Write a program to accept 2 different numbers from the user and print all the prime numbers between these 2 numbers.#
 def is_prime(n):
     if n<2:
         return False
