@@ -1,3 +1,4 @@
+'''Load data in CSV file'''
 import csv
 
 data_lst = [

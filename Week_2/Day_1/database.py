@@ -1,3 +1,4 @@
+''' Load data into TEXT file'''
 data_lst = [
     [1001,"Python",2019,1,"Heraizen"],
     [1002,"Web",2018,1,"Spaneos"],

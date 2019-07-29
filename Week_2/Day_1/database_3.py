@@ -1,3 +1,4 @@
+''' Load data into json file'''
 import json
 
 data_lst = [

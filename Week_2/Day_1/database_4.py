@@ -1,3 +1,4 @@
+''' Read data from the json file'''
 import json
 try:
     with open("ws.json","r") as file:
