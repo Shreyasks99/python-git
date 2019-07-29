@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1001,
+        "Wname": "Python",
+        "year": 2019,
+        "Status": 1,
+        "Company": "Heraizen"
+    },
+    {
+        "id": 1001,
+        "Wname": "Web",
+        "year": 2019,
+        "Status": 1,
+        "Company": "Heraizen"
+    }
+]

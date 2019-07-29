@@ -11,7 +11,7 @@ while True:
         if len(products) == 0:
             print("No products to be displayed")
         else:
-            for k,v in products:
+            for k,v in products.items():
                 print(f"{k}:{v}")
 
 

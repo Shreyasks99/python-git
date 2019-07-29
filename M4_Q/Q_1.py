@@ -15,7 +15,6 @@ def clean_init_get_stocks():
     try:
         with open("Stock.csv","r") as f:
             data = csv.reader(f,delimiter=",")
-            print(data)
             h = True
             for d in data:
                 if h:
@@ -28,12 +27,11 @@ def clean_init_get_stocks():
             else:
                 s.Price = float(s.Price.strip())
 
+        return stock_lst
+
     except Exception as err:
         print('{},value{!r}'.format(err.args[0],err))
     
-    return stock_lst
-        
-
 def show_stock_by_price(price):
     st_lst = clean_init_get_stocks()
     f = filter(lambda x:x.Price <= price,st_lst)
@@ -41,12 +39,12 @@ def show_stock_by_price(price):
         show_stock_info(list(f))
     else:
         print("No stock found for the given price:{price}")
-
+    
 def show_stock_info(list_1):
     for data in list_1:
         print(data)
 
-price = print("Enter the price:")
+price = int(input("Enter the price:"))
 show_stock_by_price(price)
 
 '''def max_min_stock_price():

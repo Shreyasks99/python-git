@@ -9,3 +9,4 @@ class Name_1:
         name = input("Enter the name:")
         balance = input("Enter the balance:")
         cls.name.append(Name(accno,name,balance))
+
