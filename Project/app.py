@@ -52,8 +52,10 @@ def c_company_ws_count():
 def c_student_ws_count():
     stu = int(input("Enter the usn of the student to check how many internship he has attend:"))
     db.student_ws_count(stu)
+
 def c_ws_student_reports():
-    pass
+    name = input("Enter the name of the student:")
+    db.ws_student_reports(name)
 
 def c_reg_stu_internship():
     iid =int(input("Enter the iid:"))

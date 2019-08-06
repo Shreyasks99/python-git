@@ -5,6 +5,7 @@ from models import Internship
 from models import Student
 from models import Company
 from models import Student_count
+from models import Student_report
 from beautifultable import BeautifulTable
 
 def _get_new_id():
@@ -130,15 +131,31 @@ def student_ws_count(stu):
             cursor = connection.cursor()
             cursor.execute("select r.iid,usn,iname,company,count(*) from registration r inner join internship i on r.iid = i.id where usn=?",(stu,))
             rows = cursor.fetchall()
-            intern_pro_lst = [Student_count(*row) for row in rows]
-            _view_stu_count_list(intern_pro_lst)
-            
+            if rows:
+                intern_pro_lst = [Student_count(*row) for row in rows]
+                _view_stu_count_list(intern_pro_lst)
+            else:
+                    print("No student to be displayed")
+
     except Exception as e:
         print(str(e))
 
     
-def ws_student_reports():
-    pass
+def ws_student_reports(name):
+    try:
+        with db.DbContext() as connection:
+            cursor = connection.cursor()
+            cursor.execute("select name,s.usn,sem,i.iname,i.company from student s inner join internship i inner join registration r on r.iid = i.id where name=?",(name,))
+            rows = cursor.fetchall()
+            if rows:
+                intern_pro_lst = [Student_report(*row) for row in rows]
+                _view_stu_report_list(intern_pro_lst)
+            else:
+                    print("No reports to be displayed")
+            
+    except Exception as e:
+        print(str(e))
+
 
 def reg_stu_internship(iid,usn):
      try:
@@ -196,6 +213,16 @@ def _view_stu_count_list(lst):
         table.column_headers = ["INTERN_ID","USN","INTERN_NAME","COMANPY","COUNT"]
         for l in lst:
             table.append_row([l.id,l.usn,l.iname,l.company,l.count])
+        print(table)
+    else:
+        print(f"There is no students to be displayed")
+
+def _view_stu_report_list(lst):
+    if lst and len(lst) > 0:
+        table = BeautifulTable()
+        table.column_headers = ["NAME","USN","SEM","INTERN_NAME","COMPANY"]
+        for l in lst:
+            table.append_row([l.name,l.usn,l.sem,l.iname,l.company])
         print(table)
     else:
         print(f"There is no students to be displayed")
